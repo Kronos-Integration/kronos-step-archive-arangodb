@@ -1,0 +1,49 @@
+{
+  "name": "kronos-step-archive-arangodb",
+  "version": "0.0.0",
+  "description": "Base step implementation",
+  "main": "lib/adapter-outbound-file.js",
+  "scripts": {
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports test",
+    "doc": "jsdoc lib/*.js",
+    "test": "mocha test/*_test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-step-archive-arangodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb/issues"
+  },
+  "homepage": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb#readme",
+  "release": {
+    "debug": false
+  },
+  "dependencies": {
+    "archive-arangodb": "^1.0.0",
+    "kronos-step": "^2.6.0"
+  },
+  "devDependencies": {
+    "chai": "3.4.1",
+    "istanbul": "^0.4.0",
+    "kronos-test-step": "^1.0.1",
+    "mocha": "2.3.4",
+    "rimraf": "2.4.4",
+    "semantic-release": "^4.3.5"
+  },
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "engines": {
+    "node": ">=4.2.1"
+  }
+}
