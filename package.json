@@ -31,7 +31,7 @@
     "istanbul": "^0.4.0",
     "kronos-service-manager": "^2.4.0",
     "kronos-step": "^2.9.0",
-    "kronos-test-step": "^1.0.1",
+    "kronos-test-step": "^2.7.0",
     "mocha": "2.3.4",
     "rimraf": "2.4.4",
     "semantic-release": "^4.3.5"
