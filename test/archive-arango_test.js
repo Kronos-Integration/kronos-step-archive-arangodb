@@ -54,6 +54,7 @@ let db2;
 
 
 describe('Test archive step', function () {
+	this.timeout(5000);
 	let kronosStepArchiveArango;
 	let messages = [];
 	let sendEndpoint;
