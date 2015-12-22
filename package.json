@@ -29,7 +29,7 @@
     "arangojs": "^4.2.1",
     "chai": "3.4.1",
     "istanbul": "^0.4.0",
-    "kronos-service-manager": "^2.4.0",
+    "kronos-service-manager": "^2.8.0",
     "kronos-step": "^2.9.0",
     "kronos-test-step": "^2.7.0",
     "mocha": "2.3.4",
