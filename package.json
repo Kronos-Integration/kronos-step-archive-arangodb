@@ -4,9 +4,9 @@
   "description": "Base step implementation",
   "main": "lib/adapter-outbound-file.js",
   "scripts": {
-    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports test",
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests",
     "doc": "jsdoc lib/*.js",
-    "test": "mocha test/*_test.js",
+    "test": "mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -23,29 +23,25 @@
   "dependencies": {
     "archive-arangodb": "^1.0.0",
     "kronos-message": "^1.0.1",
-    "kronos-step": "^2.10.2"
+    "kronos-step": "^2.11.0"
   },
   "devDependencies": {
     "arangojs": "^4.2.1",
     "chai": "3.4.1",
     "istanbul": "^0.4.0",
     "kronos-service-manager": "^2.11.0",
-    "kronos-step": "^2.9.0",
     "kronos-test-step": "^2.8.0",
     "mocha": "2.3.4",
     "rimraf": "2.5.0",
     "semantic-release": "^4.3.5"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
+  "contributors": [{
+    "name": "Torsten Link",
+    "email": "torstenlink@gmx.de"
+  }, {
+    "name": "Markus Felten",
+    "email": "markus.felten@gmx.de"
+  }],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=4.2.1"
