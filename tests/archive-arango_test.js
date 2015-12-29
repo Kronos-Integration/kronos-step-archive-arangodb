@@ -55,9 +55,9 @@ let db2;
 
 describe('Test archive step', function () {
 	this.timeout(5000);
-	let kronosStepArchiveArango;
-	let messages = [];
-	let sendEndpoint;
+	let manager;
+	// let messages = [];
+	// let sendEndpoint;
 
 	before('Create the database for testing', function () {
 		// create the database
@@ -90,41 +90,10 @@ describe('Test archive step', function () {
 
 
 	it('Start Manager', function (done) {
-		kronos.manager().then(function (manager) {
+		kronos.manager().then(function (man) {
+			manager = man;
 			// register the new steps
 			kronosStepArchive.registerWithManager(manager);
-
-			kronosStepArchiveArango = manager.getStepInstance(options);
-
-			/*
-			 * Set up the endpoints for later tests
-			 */
-			// the out endpoint to receive the messages from
-			const outEndPoint = kronosStepArchiveArango.endpoints.outAcknowledge;
-			const inEndPoint = kronosStepArchiveArango.endpoints.inData;
-
-			// This endpoint is the OUT endpoint of the previous step.
-			// It will be connected with the OUT endpoint of the Adpater
-			sendEndpoint = step.createEndpoint("testEndpointOut", {
-				"out": true,
-				"active": true
-			});
-
-			// This generator emulates the IN endpoint of the next step.
-			// It will be connected with the OUT endpoint of the adapter
-			let generatorFunction = function* () {
-				while (true) {
-					const message = yield;
-					// only push the file names
-					messages.push(message);
-				}
-			};
-
-			outEndPoint.connectedEndpoint = generatorFunction;
-			outEndPoint.outActiveIterator = generatorFunction();
-			outEndPoint.outActiveIterator.next();
-
-			inEndPoint.connect(sendEndpoint);
 
 			done();
 		}, function (reason) {
@@ -135,7 +104,7 @@ describe('Test archive step', function () {
 
 	it('store one file', function (done) {
 		// clean the array
-		messages = [];
+		//	messages = [];
 		const filePath = path.join(FIXTURES_DIR, 'existing_file.csv');
 
 		const msg = messageFactory({
@@ -147,20 +116,50 @@ describe('Test archive step', function () {
 		msg.payload = fileStream;
 
 
-		kronosStepArchiveArango.start().then(function (step) {
-			sendEndpoint.send(msg);
-
-			// give a little time before compare
-			setTimeout(function () {
-				assert.equal(messages[0].header.filename, "existing_file.csv");
-				done();
-			}, 1000);
-
-
-
-		}, function (error) {
-			done(error); // 'uh oh: something bad happened’
-		});
+		testme(manager, options, msg, "existing_file.csv", done);
 	});
 
 });
+
+
+function testme(manager, stepConfig, messageToSend, expectedMessage, done) {
+	const kronosStepArchiveArango = manager.getStepInstance(stepConfig);
+
+	/*
+	 * Set up the endpoints for later tests
+	 */
+	// the out endpoint to receive the messages from
+	const outEndPoint = kronosStepArchiveArango.endpoints.outAcknowledge;
+	const inEndPoint = kronosStepArchiveArango.endpoints.inData;
+
+	// This endpoint is the OUT endpoint of the previous step.
+	// It will be connected with the OUT endpoint of the Adpater
+	const sendEndpoint = step.createEndpoint("testEndpointOut", {
+		"out": true,
+		"active": true
+	});
+
+	// This generator emulates the IN endpoint of the next step.
+	// It will be connected with the OUT endpoint of the adapter
+	let generatorFunction = function* () {
+		while (true) {
+			const message = yield;
+			// only push the file names
+			assert.deepEqual(message.header.filename, expectedMessage);
+			done();
+		}
+	};
+
+	outEndPoint.connectedEndpoint = generatorFunction;
+	outEndPoint.outActiveIterator = generatorFunction();
+	outEndPoint.outActiveIterator.next();
+
+	inEndPoint.connect(sendEndpoint);
+
+	kronosStepArchiveArango.start().then(function (step) {
+		sendEndpoint.send(messageToSend);
+	}, function (error) {
+		done(error); // 'uh oh: something bad happened’
+	});
+
+}
