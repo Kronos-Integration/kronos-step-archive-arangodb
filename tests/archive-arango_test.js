@@ -154,7 +154,7 @@ describe('Test archive step', function () {
 			setTimeout(function () {
 				assert.equal(messages[0].header.filename, "existing_file.csv");
 				done();
-			}, 200);
+			}, 1000);
 
 
 
