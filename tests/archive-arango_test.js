@@ -144,7 +144,6 @@ function testme(manager, stepConfig, messageToSend, expectedMessage, done) {
 	let generatorFunction = function* () {
 		while (true) {
 			const message = yield;
-			// only push the file names
 			assert.deepEqual(message.header.filename, expectedMessage);
 			done();
 		}
