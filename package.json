@@ -23,7 +23,7 @@
   "dependencies": {
     "archive-arangodb": "^1.0.0",
     "kronos-message": "^2.0.1",
-    "kronos-step": "^3.4.1"
+    "kronos-step": "^3.4.2"
   },
   "devDependencies": {
     "arangojs": "^4.2.1",
@@ -35,13 +35,16 @@
     "rimraf": "2.5.0",
     "semantic-release": "^4.3.5"
   },
-  "contributors": [{
-    "name": "Torsten Link",
-    "email": "torstenlink@gmx.de"
-  }, {
-    "name": "Markus Felten",
-    "email": "markus.felten@gmx.de"
-  }],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=4.2.1"
