@@ -23,7 +23,7 @@
   "dependencies": {
     "archive-arangodb": "^1.0.0",
     "kronos-message": "^2.0.1",
-    "kronos-step": "^3.4.2"
+    "kronos-step": "^3.5.1"
   },
   "devDependencies": {
     "arangojs": "^4.2.1",
