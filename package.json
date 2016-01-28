@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "arangojs": "^4.2.1",
-    "chai": "3.4.1",
+    "chai": "3.5.0",
     "istanbul": "^0.4.2",
     "kronos-service-manager": "^2.13.1",
     "kronos-test-step": "^2.8.0",
