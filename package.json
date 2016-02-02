@@ -30,7 +30,7 @@
     "chai": "3.5.0",
     "istanbul": "^0.4.2",
     "kronos-service-manager": "^2.13.1",
-    "kronos-test-step": "^2.8.0",
+    "kronos-test-step": "^3.0.0",
     "mocha": "2.4.5",
     "rimraf": "2.5.1",
     "semantic-release": "^4.3.5"
