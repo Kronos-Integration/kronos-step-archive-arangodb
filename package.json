@@ -1,10 +1,10 @@
 {
   "name": "kronos-step-archive-arangodb",
-  "version": "0.0.0",
+  "version": "0.0.0-semantic-release",
   "description": "Base step implementation",
   "main": "lib/adapter-outbound-file.js",
   "scripts": {
-    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests",
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests/*_test.js",
     "doc": "jsdoc lib/*.js",
     "test": "mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -17,9 +17,6 @@
     "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb/issues"
   },
   "homepage": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb#readme",
-  "release": {
-    "debug": false
-  },
   "dependencies": {
     "archive-arangodb": "^1.0.0",
     "kronos-message": "^2.0.1",
@@ -28,12 +25,13 @@
   "devDependencies": {
     "arangojs": "^4.2.1",
     "chai": "3.5.0",
-    "istanbul": "^0.4.2",
+    "istanbul": "0.4.2",
     "kronos-service-manager": "^2.13.1",
     "kronos-test-step": "^2.8.0",
     "mocha": "2.4.5",
     "rimraf": "2.5.1",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "6.2.0",
+    "jsdoc": "3.4.0"
   },
   "contributors": [
     {
@@ -47,6 +45,9 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=4.2.1"
-  }
+    "node": ">=5"
+  },
+  "keywords": [
+    "kronos-step"
+  ]
 }
