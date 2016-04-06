@@ -25,7 +25,7 @@
   "devDependencies": {
     "arangojs": "^4.2.1",
     "chai": "3.5.0",
-    "istanbul": "0.4.2",
+    "istanbul": "0.4.3",
     "jsdoc": "3.4.0",
     "kronos-service-manager": "^3.2.6",
     "kronos-test-step": "^3.0.1",
@@ -33,13 +33,16 @@
     "rimraf": "2.5.2",
     "semantic-release": "6.2.1"
   },
-  "contributors": [{
-    "name": "Torsten Link",
-    "email": "torstenlink@gmx.de"
-  }, {
-    "name": "Markus Felten",
-    "email": "markus.felten@gmx.de"
-  }],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
   "license": "BSD-2-Clause",
   "engines": {
     "node": ">=5"
