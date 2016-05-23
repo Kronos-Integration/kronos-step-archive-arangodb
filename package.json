@@ -27,7 +27,7 @@
     "chai": "3.5.0",
     "istanbul": "0.4.3",
     "jsdoc": "3.4.0",
-    "kronos-service-manager": "^3.3.11",
+    "kronos-service-manager": "^3.3.13",
     "kronos-test-step": "^3.0.1",
     "mocha": "2.5.1",
     "rimraf": "2.5.2",
