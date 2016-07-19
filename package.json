@@ -25,7 +25,7 @@
   "devDependencies": {
     "arangojs": "^5.0.3",
     "chai": "3.5.0",
-    "istanbul": "0.4.3",
+    "istanbul": "0.4.4",
     "jsdoc": "3.4.0",
     "kronos-service-manager": "^3.4.1",
     "kronos-test-step": "^3.0.1",
