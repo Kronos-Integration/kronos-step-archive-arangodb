@@ -30,7 +30,7 @@
     "kronos-service-manager": "^3.4.1",
     "kronos-test-step": "^3.0.1",
     "mocha": "2.5.3",
-    "rimraf": "2.5.3",
+    "rimraf": "2.5.4",
     "semantic-release": "6.3.0"
   },
   "contributors": [
