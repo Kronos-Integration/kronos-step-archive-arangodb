@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb#readme",
   "dependencies": {
     "archive-arangodb": "^1.0.0",
-    "kronos-message": "^2.0.1",
+    "kronos-message": "^2.1.1",
     "kronos-step": "^5.3.7"
   },
   "devDependencies": {
