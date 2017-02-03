@@ -23,7 +23,7 @@
     "kronos-step": "^5.3.7"
   },
   "devDependencies": {
-    "arangojs": "^5.1.0",
+    "arangojs": "^5.6.0",
     "chai": "3.5.0",
     "cz-conventional-changelog": "1.2.0",
     "istanbul": "0.4.5",
