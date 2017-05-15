@@ -30,7 +30,7 @@
     "jsdoc": "3.4.3",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
-    "mocha": "3.4.0",
+    "mocha": "3.4.1",
     "rimraf": "2.6.1",
     "semantic-release": "6.3.6"
   },
