@@ -32,7 +32,7 @@
     "kronos-test-step": "^3.0.1",
     "mocha": "3.5.0",
     "rimraf": "2.6.1",
-    "semantic-release": "6.3.6"
+    "semantic-release": "7.0.1"
   },
   "contributors": [
     {
