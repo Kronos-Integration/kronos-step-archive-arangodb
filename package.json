@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb.git"
+    "url": "git+https://github.com/Kronos-Integration/kronos-step-archive-arangodb.git"
   },
   "bugs": {
     "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb/issues"
@@ -24,15 +24,15 @@
   },
   "devDependencies": {
     "arangojs": "^5.7.0",
-    "chai": "4.1.2",
+    "chai": "^4.1.2",
     "cz-conventional-changelog": "2.0.0",
     "istanbul": "0.4.5",
     "jsdoc": "3.5.4",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
-    "mocha": "3.5.2",
+    "mocha": "^3.5.2",
     "rimraf": "2.6.1",
-    "semantic-release": "7.0.2"
+    "semantic-release": "^8.0.0"
   },
   "contributors": [
     {
@@ -46,14 +46,17 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=6.9.1"
+    "node": ">=8.4.0"
   },
   "keywords": [
     "kronos-step"
   ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/Kronos-Tools/npm-package-template-minimal.git"
     }
   }
 }
