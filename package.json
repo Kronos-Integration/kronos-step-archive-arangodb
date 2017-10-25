@@ -30,9 +30,9 @@
     "jsdoc": "3.5.5",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
-    "mocha": "^4.0.1",
+    "mocha": "^3.5.3",
     "rimraf": "2.6.2",
-    "semantic-release": "^8.2.0"
+    "semantic-release": "^8.2.2"
   },
   "contributors": [
     {
@@ -46,7 +46,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=8.7.0"
   },
   "keywords": [
     "kronos-step"
