@@ -25,7 +25,7 @@
   "devDependencies": {
     "arangojs": "^5.7.1",
     "chai": "^4.1.2",
-    "cz-conventional-changelog": "2.0.0",
+    "cz-conventional-changelog": "2.1.0",
     "istanbul": "0.4.5",
     "jsdoc": "3.5.5",
     "kronos-service-manager": "^3.5.10",
