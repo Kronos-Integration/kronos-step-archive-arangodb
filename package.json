@@ -1,8 +1,9 @@
 {
   "name": "kronos-step-archive-arangodb",
   "version": "0.0.0-semantic-release",
-  "description": "Base step implementation",
-  "main": "lib/adapter-outbound-file.js",
+  "description": "archive messages into arangodb",
+  "module": "src/archive-arangodb.js",
+  "main": "dist/archive-arangodb.js",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "doc": "./node_modules/.bin/jsdoc lib/*.js",
@@ -12,8 +13,8 @@
     "pretest": "rollup -c tests/rollup.config.js",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
-    "docs": "documentation readme {{module}} --section=API",
-    "lint": "documentation lint {{module}}"
+    "docs": "documentation readme src/archive-arangodb.js --section=API",
+    "lint": "documentation lint src/archive-arangodb.js"
   },
   "repository": {
     "type": "git",
