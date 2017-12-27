@@ -4,10 +4,16 @@
   "description": "Base step implementation",
   "main": "lib/adapter-outbound-file.js",
   "scripts": {
-    "cover": "./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests/*_test.js",
+    "cover": "nyc --temp-directory build/nyc ava",
     "doc": "./node_modules/.bin/jsdoc lib/*.js",
-    "test": "./node_modules/.bin/mocha tests/*_test.js",
-    "semantic-release": "semantic-release"
+    "test": "ava",
+    "semantic-release": "semantic-release",
+    "precover": "rollup -c tests/rollup.config.js",
+    "pretest": "rollup -c tests/rollup.config.js",
+    "posttest": "npm run prepare && markdown-doctest",
+    "prepare": "rollup -c",
+    "docs": "documentation readme {{module}} --section=API",
+    "lint": "documentation lint {{module}}"
   },
   "repository": {
     "type": "git",
@@ -24,15 +30,18 @@
   },
   "devDependencies": {
     "arangojs": "^5.8.0",
-    "chai": "^4.1.2",
-    "cz-conventional-changelog": "2.1.0",
-    "istanbul": "0.4.5",
-    "jsdoc": "3.5.5",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
-    "mocha": "^3.5.3",
     "rimraf": "2.6.2",
-    "semantic-release": "^11.1.0"
+    "semantic-release": "^11.1.0",
+    "documentation": "^5.3.5",
+    "markdown-doctest": "^0.9.1",
+    "nyc": "^11.4.1",
+    "ava": "^0.24.0",
+    "rollup": "^0.53.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-multi-entry": "^2.0.2",
+    "xo": "^0.19.0"
   },
   "contributors": [
     {
@@ -56,7 +65,27 @@
   },
   "template": {
     "repository": {
-      "url": "https://github.com/Kronos-Tools/npm-package-template-minimal.git"
+      "url": "https://github.com/arlac77/npm-package-template.git"
     }
+  },
+  "ava": {
+    "files": [
+      "build/*-test.js"
+    ],
+    "presets": [
+      "env"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "build/*-test.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "./build/coverage"
   }
 }
