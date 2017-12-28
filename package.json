@@ -1,9 +1,23 @@
 {
   "name": "kronos-step-archive-arangodb",
   "version": "0.0.0-semantic-release",
-  "description": "archive messages into arangodb",
-  "module": "src/archive-arangodb.js",
   "main": "dist/archive-arangodb.js",
+  "module": "src/archive-arangodb.js",
+  "description": "archive messages into arangodb",
+  "keywords": [
+    "kronos-step"
+  ],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "doc": "./node_modules/.bin/jsdoc lib/*.js",
@@ -16,14 +30,6 @@
     "docs": "documentation readme src/archive-arangodb.js --section=API",
     "lint": "documentation lint src/archive-arangodb.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-step-archive-arangodb.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb/issues"
-  },
-  "homepage": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb#readme",
   "dependencies": {
     "archive-arangodb": "^1.0.0",
     "kronos-message": "^2.1.4",
@@ -43,31 +49,17 @@
     "rollup-plugin-multi-entry": "^2.0.2",
     "xo": "^0.19.0"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
-  "license": "BSD-2-Clause",
   "engines": {
     "node": ">=8.9.3"
   },
-  "keywords": [
-    "kronos-step"
-  ],
-  "xo": {
-    "space": true
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-step-archive-arangodb.git"
   },
-  "template": {
-    "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
-    }
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb/issues"
   },
+  "homepage": "https://github.com/Kronos-Integration/kronos-step-archive-arangodb#readme",
   "ava": {
     "files": [
       "build/*-test.js"
@@ -87,5 +79,13 @@
       "lcov"
     ],
     "report-dir": "./build/coverage"
+  },
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   }
 }
