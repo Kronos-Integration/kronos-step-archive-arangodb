@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "archive-arangodb": "^1.0.0",
-    "kronos-message": "^2.1.4",
+    "kronos-message": "^2.1.5",
     "kronos-step": "^5.6.6"
   },
   "devDependencies": {
