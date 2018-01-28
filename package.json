@@ -41,7 +41,7 @@
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
     "rimraf": "2.6.2",
-    "semantic-release": "^13.0.0",
+    "semantic-release": "^13.0.2",
     "documentation": "^5.3.5",
     "markdown-doctest": "^0.9.1",
     "nyc": "^11.4.1",
