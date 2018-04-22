@@ -42,7 +42,7 @@
     "kronos-test-step": "^3.0.1",
     "rimraf": "2.6.2",
     "semantic-release": "^15.1.7",
-    "documentation": "^6.2.0",
+    "documentation": "^6.3.0",
     "markdown-doctest": "^0.9.1",
     "nyc": "^11.7.1",
     "ava": "^0.25.0",
