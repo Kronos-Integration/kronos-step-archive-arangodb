@@ -1,6 +1,9 @@
 {
   "name": "kronos-step-archive-arangodb",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/archive-arangodb.js",
   "module": "src/archive-arangodb.js",
   "description": "archive messages into arangodb",
