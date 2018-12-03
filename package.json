@@ -46,7 +46,7 @@
     "documentation": "^8.1.2",
     "markdown-doctest": "^0.9.1",
     "ava": "^1.0.0-rc.2",
-    "rollup": "^0.67.3",
+    "rollup": "^0.67.4",
     "travis-deploy-once": "^5.0.9",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
