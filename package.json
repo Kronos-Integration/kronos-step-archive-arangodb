@@ -43,7 +43,7 @@
     "kronos-test-step": "^3.0.1",
     "rimraf": "2.6.2",
     "semantic-release": "^15.12.4",
-    "documentation": "^8.1.2",
+    "documentation": "^9.0.0",
     "markdown-doctest": "^0.9.1",
     "ava": "^1.0.0-rc.2",
     "rollup": "^0.67.4",
