@@ -25,12 +25,10 @@
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
     "doc": "./node_modules/.bin/jsdoc lib/*.js",
     "test": "ava",
-    "semantic-release": "semantic-release",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "docs": "documentation readme src/archive-arangodb.js --section=API",
-    "lint": "documentation lint src/archive-arangodb.js",
-    "travis-deploy-once": "travis-deploy-once"
+    "lint": "documentation lint src/archive-arangodb.js"
   },
   "dependencies": {
     "archive-arangodb": "^1.0.0",
@@ -47,7 +45,6 @@
     "markdown-doctest": "^0.9.1",
     "ava": "^1.0.1",
     "rollup": "^1.0.0",
-    "travis-deploy-once": "^5.0.11",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-executable": "^1.3.0",
