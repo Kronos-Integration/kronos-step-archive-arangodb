@@ -9,7 +9,6 @@ cache: npm
 notifications:
   email:
     - torstenlink@gmx.de
-    - markus.felten@gmx.de
 before_script:
   - chmod 777 ./tests/travis/setup_arangodb.sh
   - ./tests/travis/setup_arangodb.sh
