@@ -39,7 +39,7 @@
     "arangojs": "^6.10.0",
     "ava": "^1.4.1",
     "c8": "^3.5.0",
-    "documentation": "^9.3.1",
+    "documentation": "^10.0.0",
     "esm": "^3.2.22",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.0.1",
