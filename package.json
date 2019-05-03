@@ -45,7 +45,7 @@
     "kronos-test-step": "^3.1.4",
     "markdown-doctest": "^0.9.1",
     "rimraf": "2.6.3",
-    "rollup": "^1.10.1",
+    "rollup": "^1.11.0",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-executable": "^1.4.5",
