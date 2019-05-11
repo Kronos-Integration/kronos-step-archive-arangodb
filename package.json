@@ -38,7 +38,7 @@
   "devDependencies": {
     "arangojs": "^6.10.0",
     "ava": "^1.4.1",
-    "c8": "^4.1.4",
+    "c8": "^4.1.5",
     "documentation": "^11.0.0",
     "esm": "^3.2.22",
     "kronos-service-manager": "^3.5.10",
@@ -50,7 +50,7 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-executable": "^1.4.5",
     "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-node-resolve": "^4.2.4",
     "semantic-release": "^15.13.13"
   },
   "engines": {
