@@ -36,11 +36,12 @@
     "kronos-step": "^5.7.0"
   },
   "devDependencies": {
+    "@rollup/plugin-json": "^4.0.0",
     "arangojs": "^6.12.0",
     "ava": "^2.4.0",
     "builtin-modules": "^3.1.0",
     "c8": "^6.0.1",
-    "documentation": "^12.1.3",
+    "documentation": "^12.1.4",
     "esm": "^3.2.25",
     "kronos-service-manager": "^3.5.10",
     "kronos-test-step": "^3.1.4",
@@ -50,7 +51,6 @@
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-executable": "^1.5.1",
-    "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.30"
   },
